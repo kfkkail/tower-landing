@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop the Tower - Protect Our Neighborhood</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .tagline {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info-box p {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card.visual {
+            background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
+        }
+
+        .feature-card.property {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);
+        }
+
+        .feature-card.light {
+            background: linear-gradient(135deg, #fffde7 0%, #fff59d 100%);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card.visual .feature-icon {
+            color: #dc3545;
+        }
+
+        .feature-card.property .feature-icon {
+            color: #ff9800;
+        }
+
+        .feature-card.light .feature-icon {
+            color: #ffc107;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .concerns-section {
+            margin: 60px 0;
+        }
+
+        .concerns-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .concern-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #dc3545;
+        }
+
+        .concern-icon {
+            color: #dc3545;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .concern-content h4 {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .concern-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .action-section {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .action-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .action-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #dc3545, #c82333);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(220, 53, 69, 0.4);
+        }
+
+        .email-preview {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .email-preview h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .email-preview p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .email-content {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #007bff;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .feature-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">📡 Stop the Tower</div>
+            <div class="tagline">Protecting Ashford Lane & Surrounding Neighborhoods</div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Help Us Oppose the 275-Foot Tower</h1>
+            <p>A telecommunications tower is proposed at 50831 Ironwood Rd, just 700 feet from our backyards. We need your voice to protect our neighborhood.</p>
+            
+            <div class="info-box">
+                <h3>Public Hearing Details</h3>
+                <p>Planning Commission Meeting</p>
+                <p>Contact: planning@sjcindiana.gov</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2 class="section-title">Why We Need Your Help</h2>
+        
+        <div class="feature-cards">
+            <div class="feature-card visual">
+                <span class="feature-icon">👁️</span>
+                <h3>Visual Impact</h3>
+                <p>The 275-foot tower will rise far above the tree canopy, permanently altering our neighborhood's character and creating an industrial presence in a residential area.</p>
+            </div>
+            
+            <div class="feature-card property">
+                <span class="feature-icon">🏠</span>
+                <h3>Property Values</h3>
+                <p>Visible telecommunications towers can reduce nearby property values by several percentage points, representing a real and lasting cost for homeowners.</p>
+            </div>
+            
+            <div class="feature-card light">
+                <span class="feature-icon">💡</span>
+                <h3>Light Pollution</h3>
+                <p>The tower's required FAA lighting will introduce nightly light pollution, affecting the peaceful residential environment we've worked to maintain.</p>
+            </div>
+        </div>
+
+        <div class="concerns-section">
+            <h3 class="concerns-title">Key Concerns:</h3>
+            
+            <div class="concern-item">
+                <span class="concern-icon">▲</span>
+                <div class="concern-content">
+                    <h4>Private Benefit:</h4>
+                    <p>This project is for specialized financial communications, not local wireless coverage. There's no binding commitment to add carriers or expand service.</p>
+                </div>
+            </div>
+            
+            <div class="concern-item">
+                <span class="concern-icon">▲</span>
+                <div class="concern-content">
+                    <h4>Incompatible Use:</h4>
+                    <p>An industrial structure of this scale is incompatible with a residential setting and will permanently change the look and feel of our neighborhood.</p>
+                </div>
+            </div>
+            
+            <div class="concern-item">
+                <span class="concern-icon">▲</span>
+                <div class="concern-content">
+                    <h4>Precedent Setting:</h4>
+                    <p>Granting an exception of this magnitude without a clear, guaranteed public benefit sets a troubling precedent for future development.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <h2>Take Action Now</h2>
+            <p>Send your opposition email to the planning commission with one click</p>
+            <button class="cta-button" onclick="sendEmail()">
+                📧 Send Opposition Email
+            </button>
+        </div>
+
+        <div class="email-preview">
+            <h3>📝 Email Preview</h3>
+            <p><strong>To:</strong> planning@sjcindiana.gov</p>
+            <p><strong>Subject:</strong> Opposition to Variance Request – 275' Telecommunications Tower at 50831 Ironwood Rd</p>
+            <p><strong>Message:</strong></p>
+            <div class="email-content">
+                Dear Members of the Board,<br><br>
+                I am writing to express my strong opposition to the proposed 275-foot telecommunications tower at 50831 Ironwood Rd.<br><br>
+                This tower will permanently change the look and feel of our neighborhood. Even with existing vegetation, a structure of this scale will be impossible to hide. The 275-foot height ensures it will rise far above the mature tree canopy, altering views and introducing nightly light pollution. This type of industrial structure is incompatible with a residential setting and can reduce nearby property values.<br><br>
+                Additionally, this project appears to be for private benefit, not public need. According to the petition, the tower's initial use is for specialized financial communications, not local wireless coverage. There's no binding commitment to add carriers or expand service. Granting an exception of this magnitude without a clear, guaranteed public benefit sets a troubling precedent.<br><br>
+                Once built, this tower will remain visible from our homes for decades to come. I ask the board to protect the residential character and property values of this community by denying the requested variances.<br><br>
+                Thank you for your time and consideration.<br><br>
+                Sincerely,<br>
+                [Your Name]<br>
+                [Your Address]
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Neighborhood Coalition | Working together to protect our community</p>
+    </div>
+
+    <script>
+        function sendEmail() {
+            const subject = encodeURIComponent('Opposition to Variance Request – 275\' Telecommunications Tower at 50831 Ironwood Rd');
+            const body = encodeURIComponent(`Dear Members of the Board,
+
+I am writing to express my strong opposition to the proposed 275-foot telecommunications tower at 50831 Ironwood Rd.
+
+This tower will permanently change the look and feel of our neighborhood. Even with existing vegetation, a structure of this scale will be impossible to hide. The 275-foot height ensures it will rise far above the mature tree canopy, altering views and introducing nightly light pollution. This type of industrial structure is incompatible with a residential setting and can reduce nearby property values.
+
+Additionally, this project appears to be for private benefit, not public need. According to the petition, the tower's initial use is for specialized financial communications, not local wireless coverage. There's no binding commitment to add carriers or expand service. Granting an exception of this magnitude without a clear, guaranteed public benefit sets a troubling precedent.
+
+Once built, this tower will remain visible from our homes for decades to come. I ask the board to protect the residential character and property values of this community by denying the requested variances.
+
+Thank you for your time and consideration.
+
+Sincerely,
+[Your Name]
+[Your Address]`);
+
+            const mailtoLink = `mailto:planning@sjcindiana.gov?subject=${subject}&body=${body}&bcc=kail.keusch@hey.com`;
+            
+            window.location.href = mailtoLink;
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButton = document.querySelector('.cta-button');
+            
+            ctaButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            ctaButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
