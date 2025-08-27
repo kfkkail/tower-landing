@@ -18,36 +18,10 @@
             background: #ffffff;
         }
 
-        .header {
-            background: white;
-            padding: 20px 0;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #dc3545;
-        }
-
-        .tagline {
-            color: #6c757d;
-            font-size: 1rem;
-        }
-
         .hero {
-            background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -57,327 +31,179 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 40px;
             opacity: 0.95;
         }
 
-        .info-box {
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #dc3545;
+            padding: 20px 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .urgent-info {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 12px;
-            padding: 30px;
+            padding: 20px;
             margin: 0 auto;
             max-width: 500px;
             backdrop-filter: blur(10px);
         }
 
-        .info-box h3 {
-            font-size: 1.4rem;
+        .urgent-info h3 {
+            font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
-        .info-box p {
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-
         .main-content {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .feature-cards {
+        .key-points {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin: 40px 0;
         }
 
-        .feature-card {
+        .point {
             background: #f8f9fa;
-            border-radius: 15px;
-            padding: 40px 30px;
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card.visual {
-            background: linear-gradient(135deg, #ffe6e6 0%, #ffcccc 100%);
-        }
-
-        .feature-card.property {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);
-        }
-
-        .feature-card.light {
-            background: linear-gradient(135deg, #fffde7 0%, #fff59d 100%);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .feature-card.visual .feature-icon {
-            color: #dc3545;
-        }
-
-        .feature-card.property .feature-icon {
-            color: #ff9800;
-        }
-
-        .feature-card.light .feature-icon {
-            color: #ffc107;
-        }
-
-        .feature-card h3 {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .concerns-section {
-            margin: 60px 0;
-        }
-
-        .concerns-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .concern-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
             border-left: 4px solid #dc3545;
         }
 
-        .concern-icon {
-            color: #dc3545;
-            font-size: 1.2rem;
-            margin-top: 2px;
-        }
-
-        .concern-content h4 {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .concern-content p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .action-section {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            margin: 60px 0;
-        }
-
-        .action-section h2 {
+        .point-icon {
             font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .point h3 {
+            font-size: 1.2rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #333;
         }
 
-        .action-section p {
-            font-size: 1.2rem;
+        .point p {
             color: #666;
-            margin-bottom: 40px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #dc3545, #c82333);
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(220, 53, 69, 0.4);
+            font-size: 0.95rem;
         }
 
         .email-preview {
-            background: white;
+            background: #f8f9fa;
             border: 2px solid #e9ecef;
             border-radius: 15px;
-            padding: 40px;
+            padding: 30px;
             margin: 40px 0;
         }
 
         .email-preview h3 {
             color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
         }
 
         .email-preview p {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #666;
+            font-size: 0.9rem;
         }
 
         .email-content {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
             margin-top: 15px;
             border-left: 4px solid #007bff;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         .footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 30px 20px;
+            margin-top: 40px;
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .feature-cards {
-                grid-template-columns: 1fr;
+                font-size: 2.2rem;
             }
             
             .cta-button {
                 padding: 15px 30px;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">📡 Stop the Tower</div>
-            <div class="tagline">Protecting Ashford Lane & Surrounding Neighborhoods</div>
-        </div>
-    </div>
-
     <div class="hero">
         <div class="hero-content">
-            <h1>Help Us Oppose the 275-Foot Tower</h1>
-            <p>A telecommunications tower is proposed at 50831 Ironwood Rd, just 700 feet from our backyards. We need your voice to protect our neighborhood.</p>
+            <h1>🚫 Stop the Tower</h1>
+            <p>A 275-foot telecommunications tower is proposed at 50831 Ironwood Rd, just 700 feet from our backyards.</p>
             
-            <div class="info-box">
-                <h3>Public Hearing Details</h3>
-                <p>Planning Commission Meeting</p>
-                <p>Contact: planning@sjcindiana.gov</p>
+            <button class="cta-button" onclick="sendEmail()">
+                📧 Send Opposition Email Now
+            </button>
+            
+            <div class="urgent-info">
+                <h3>⚠️ Time is Critical</h3>
+                <p>Planning Commission is reviewing variance requests now. Every email counts!</p>
             </div>
         </div>
     </div>
 
     <div class="main-content">
-        <h2 class="section-title">Why We Need Your Help</h2>
-        
-        <div class="feature-cards">
-            <div class="feature-card visual">
-                <span class="feature-icon">👁️</span>
+        <div class="key-points">
+            <div class="point">
+                <span class="point-icon">👁️</span>
                 <h3>Visual Impact</h3>
-                <p>The 275-foot tower will rise far above the tree canopy, permanently altering our neighborhood's character and creating an industrial presence in a residential area.</p>
+                <p>275-foot tower will rise above tree canopy, permanently changing our neighborhood's character</p>
             </div>
             
-            <div class="feature-card property">
-                <span class="feature-icon">🏠</span>
+            <div class="point">
+                <span class="point-icon">🏠</span>
                 <h3>Property Values</h3>
-                <p>Visible telecommunications towers can reduce nearby property values by several percentage points, representing a real and lasting cost for homeowners.</p>
+                <p>Visible towers can reduce nearby property values by several percentage points</p>
             </div>
             
-            <div class="feature-card light">
-                <span class="feature-icon">💡</span>
+            <div class="point">
+                <span class="point-icon">💡</span>
                 <h3>Light Pollution</h3>
-                <p>The tower's required FAA lighting will introduce nightly light pollution, affecting the peaceful residential environment we've worked to maintain.</p>
+                <p>Required FAA lighting will introduce nightly light pollution to our residential area</p>
             </div>
-        </div>
-
-        <div class="concerns-section">
-            <h3 class="concerns-title">Key Concerns:</h3>
-            
-            <div class="concern-item">
-                <span class="concern-icon">▲</span>
-                <div class="concern-content">
-                    <h4>Private Benefit:</h4>
-                    <p>This project is for specialized financial communications, not local wireless coverage. There's no binding commitment to add carriers or expand service.</p>
-                </div>
-            </div>
-            
-            <div class="concern-item">
-                <span class="concern-icon">▲</span>
-                <div class="concern-content">
-                    <h4>Incompatible Use:</h4>
-                    <p>An industrial structure of this scale is incompatible with a residential setting and will permanently change the look and feel of our neighborhood.</p>
-                </div>
-            </div>
-            
-            <div class="concern-item">
-                <span class="concern-icon">▲</span>
-                <div class="concern-content">
-                    <h4>Precedent Setting:</h4>
-                    <p>Granting an exception of this magnitude without a clear, guaranteed public benefit sets a troubling precedent for future development.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="action-section">
-            <h2>Take Action Now</h2>
-            <p>Send your opposition email to the planning commission with one click</p>
-            <button class="cta-button" onclick="sendEmail()">
-                📧 Send Opposition Email
-            </button>
         </div>
 
         <div class="email-preview">
